@@ -1,0 +1,442 @@
+:root
+{
+    --starbucks_theme : #00704A;
+    --starbucks_black : #27251F;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Montserrat',sans-serif;
+    color: var(--starbucks_black);
+}
+
+body
+{
+    max-width: auto;
+    margin: auto;
+}
+
+/* header */
+.header
+{
+    height:7rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 5px solid var(--starbucks_theme);
+}
+.header .logo 
+{
+    margin-left: 4rem;
+    height:5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .logo img
+{
+    width: 5rem;
+}
+.header_aside
+{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.search
+{
+    display: flex;
+    border: 2px solid rgb(165, 165, 165);
+    padding:0.2rem;
+}
+.search input
+{
+    border: none;
+    padding:.3rem;
+    outline: none;
+}
+.search svg
+{
+    fill:rgb(144, 143, 143) ;
+    cursor: pointer;
+}
+
+/* menu icon */
+.menu_mobile
+{
+    margin-right: 3.5rem;
+    display:inline-block;
+    cursor: pointer;
+    margin-left: 3.5rem;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(121, 121, 121);
+    margin: 6px 0;
+    transition: 0.4s;
+
+    border-radius: 1rem;
+}
+.change .bar1 
+{
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2
+{
+    opacity: 0;
+}
+
+.change .bar3
+{
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* main */
+
+
+/* banner */
+.banner
+{
+    height:100vh;
+    background-image: url("./assets/bg.jpg");
+}
+.banner_content
+{
+    padding-left: 4rem;
+    width: calc(100vh - 4rem);
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:space-around;
+}
+.banner_label
+{
+    margin-left: 2rem;
+}
+.banner_header
+{
+    font-size: 4rem;
+    width:50vw;
+}
+.banner_speech
+{
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+.banner_products
+{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
+}
+.banner_products .frame
+{
+    cursor:pointer;
+    border-radius: 50%;
+    border: 4px solid var(--starbucks_theme);
+}
+.banner_products .frame img
+{
+    border-radius: 50%;
+    width: 8rem;
+    grid-template-columns: repeat(4, auto);
+}
+
+/* general */
+.bar::before
+{   
+    display:block;
+    margin-bottom: 1rem;
+    content: "";
+    width: 10rem;
+    height:1.5rem;
+    background: #00704A;
+}
+    /* button */
+.see_more 
+{
+    margin-top: 5rem;
+   }
+.see_more .button
+{
+    border: 1px solid var(--starbucks_black);
+    padding: .6rem 2rem;
+    cursor: pointer;
+}
+.see_more .button:hover
+{
+    background-color: var(--starbucks_black);
+    color: white;
+}
+
+/* flavour 01 */
+.flavour_description01 .container
+{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.flavour_description01 .container_description
+{
+    padding: 4rem;
+    padding-bottom: 0;
+    margin-left: 1rem;
+    margin-bottom: 5rem;
+
+}
+.flavour_header
+{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.mention
+{
+    width:35.5vw;
+}
+.author
+{
+    margin-bottom: 1.5rem;
+}
+.mention_content
+{
+    line-height: 1.6rem;
+}
+
+    /* photos */
+
+.container_description
+{
+    grid-area: 1/ 1 / 2 /2 ;
+}
+.photo_01
+{
+    background-image: url('./assets/f1.jpg');
+    background-position: center;
+    background-size: cover;
+    grid-area: 1 /2 /3 / 3 ;
+
+
+}
+.photo_02
+{
+    background-image: url('./assets/f2.jpg');
+    background-position: center;
+    background-size: cover;
+    height:25rem;
+    
+}
+
+
+/* flavour 2 */
+.flavour_description02 .container
+{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.flavour_description02 .container_description
+{
+    margin: 4rem 0 4rem 4rem;
+    grid-column: 2 /3;
+}
+.flavour_description02 .description
+{
+    width: 35vw;
+    line-height: 1.5rem;
+}
+.vanilla_01
+{
+    background-image: url('./assets/f3.jpg');
+    background-position: center;
+    background-size: cover;
+    grid-area: 1 /1 /3 / 2 ;
+
+
+}
+.vanilla_02
+{
+    background-image: url('./assets/f4.jpg');
+    background-position: center;
+    background-size: cover;
+    height:25rem;
+    
+}
+
+/* flavour 3 */
+.flavour_description03 .container
+{
+    background-image: url('./assets/bg2.jpg');
+    height: 1200px;;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.flavour_description03 .container_description
+{
+
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:center;
+    margin-left: 4rem;
+}
+
+.flavour_description03 .description
+{
+    width: 35vw;
+    line-height: 1.5rem;
+}
+.caramel_01
+{
+    background-image: url('./assets/f5.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* flavour 4 */
+.flavour_description04 .container
+{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #e8e8e8;
+}
+.flavour_description04 .container_description
+{
+    width: 35vw;
+    padding: 4rem;
+    margin: 6rem 0 4rem 3rem;
+}
+.flavour_description04 .description
+{
+    width: 25vw;
+    line-height: 1.5rem;
+}
+.cups_01
+{
+    background-image: url('./assets/bg3.jpg');
+    background-position: center;
+    background-size: cover;
+    grid-column: 2/4;
+}
+
+/* blender */
+
+.image
+{
+    background-image: url('./assets/bg4.jpg');
+    height:50vw;
+}
+
+/* footer */
+footer
+{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    background-color: var(--starbucks_black);
+    height:12rem;
+}
+footer h4
+{
+    color: white;
+}
+
+@media (max-width:800px)
+{
+    body
+    {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    
+    .header .logo 
+    {
+        margin-left:1rem;
+    }
+    .search
+    {
+        margin-left: 2rem;
+    }
+    /* banner */
+    .banner_content
+    {
+        padding-left: .1rem;
+    }
+   /*  .banner_label
+    {
+        margin-left: -2rem;
+    } */
+    .banner_header
+    {
+        font-size: 3.5rem;
+    }
+    .banner_speech
+    {
+        width:80%;
+    }
+    .banner_products
+    {
+        margin-left: -.2rem;
+    }
+
+/* flavour 01 */
+
+    .flavour_description01 .container
+    {
+        grid-template-columns: 1fr;
+    }
+    .mention
+    {
+        width: auto;
+    }
+
+    
+    .photo_01
+    {
+        display: none;
+    }
+    .photo_02
+    {
+        grid-row:2/3;
+    }
+
+/* flavour 2 */
+    .flavour_description02 .container
+    {
+        grid-template-columns: 1fr;
+        margin-left: -1rem;
+    }
+    .flavour_description02 .description
+    {
+        width: auto;
+        margin-right: 1rem;
+    }
+
+/* flavour 3 */
+    .flavour_description03 .container
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .flavour_description03 .description
+    {
+        width: auto;
+        margin-right: 2rem;
+    }
+
+/* flavour 4 */
+
+}
+ 
