@@ -360,7 +360,10 @@ footer h4
 
 @media (max-width: 600px)
 {
-    
+    body
+    {
+        overflow-x: hidden;
+    }
     .header .logo 
     {
         margin-left:1rem;
@@ -438,5 +441,30 @@ footer h4
 
 /* flavour 4 */
 
+    .flavour_description04 .container
+    {
+        grid-template-columns: 1fr;
+    }
+    .flavour_description04 .container_description
+    {
+       width: auto;
+       margin-left: -1rem;
+    }
+    .flavour_description04 .description
+    {
+        width: auto;
+    }
+    .cups_01
+    {
+        display:none
+    }
+
+/* blender */
+
+    .image
+    {
+        background-position: center;
+        background-size: cover;
+    }
 }
  
